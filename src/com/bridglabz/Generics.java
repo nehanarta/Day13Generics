@@ -1,21 +1,24 @@
 package com.bridglabz;
 
 public class Generics {
-        public static void stringMax(String x,String y,String z){
-            String max=x;
-            if (y.compareTo(max)>0){
-                max=y;
-            }
-            if (z.compareTo(max)>0){
-                max=z;
-            }
-            System.out.println(max+" is maximum");
+    public static <T extends Comparable> T testCase(T a, T b, T c) {
+        T max = a;
+        if (b.compareTo(max) > 0) {
+            max = b;
         }
-
-        public static void main(String[] args) {
-            stringMax("om","Sai","shree");
+        if (c.compareTo(max) > 0) {
+            max = c;
         }
-
+        return max;
     }
+
+    public static void main(String[] args) {
+        System.out.println("Welcome to maximum number program !");
+        System.out.println("Maximum among three integer values is :" + testCase(900, 5000, 10));
+        System.out.println("Maximum among three float values is :" + testCase(9.8f, 5.7f, 101.7f));
+        System.out.println("Maximum among three string values is :" + testCase("om", "Shree", "sai"));
+    }
+
+}
 
 
