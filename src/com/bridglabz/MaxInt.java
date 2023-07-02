@@ -13,7 +13,8 @@ public class MaxInt {
     }
 
     public static void main(String[] args) {
-        testMaxNum(1,20,3);
+        System.out.println("welcome to the generics problems");
+      testMaxNum(1,20,3);
 
 
 
